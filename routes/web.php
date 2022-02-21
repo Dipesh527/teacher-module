@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 Route::get('/index','App\Http\Controllers\TeacherControler@index')->name('index');
 Route::get('/create','App\Http\Controllers\TeacherControler@create')->name('create');
+Route::post('/store','App\Http\Controllers\TeacherControler@store')->name('store');

@@ -5,46 +5,58 @@
         <div class="card-body">
             <h4 class="card-title">Basic form elements</h4>
             <p class="card-description"> Basic form elements </p>
-            <form class="forms-sample">
+            <form class="forms-sample" action="{{ route('store') }}" method="POST">
+                @csrf
                 <div class="form-group">
                     <label for="exampleInputName1">Name</label>
-                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                    <input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="Name">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail3">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                    <input type="email" class="form-control" id="exampleInputEmail3" name="email" placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword4">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                    <label for="exampleInputAddress3">Address</label>
+                    <input type="text" class="form-control" id="exampleInputNumber3" name="address" placeholder="Number">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputNumber3">Number</label>
+                    <input type="integer" class="form-control" id="exampleInputNumber3" name="number" placeholder="Number">
                 </div>
                 <div class="form-group">
                     <label for="exampleSelectGender">Gender</label>
-                    <select class="form-control" id="exampleSelectGender">
-  <option>Male</option>
-  <option>Female</option>
-  </select>
+                    <select class="form-control" name="gender" id="exampleSelectGender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                     </select>
+                </div>
+              
+                <div class="form-group">
+                    <label for="exampleSelectFaculty">Faculty</label>
+                    <select class="form-control" name="faculty" id="exampleSelectGender">
+                                    <option>science</option>
+                                    <option>math</option>
+                                    </select>
+                </div>
+             
+                <div class="form-group">
+                    <label for="exampleSelectModule">Module</label>
+                    <select class="form-control" name="module" id="exampleSelectGender">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    </select>
                 </div>
                 <div class="form-group">
-                    <label>File upload</label>
-                    <input type="file" name="img[]" class="file-upload-default">
-                    <div class="input-group col-xs-12">
-                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                        <span class="input-group-append">
-    <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-  </span>
-                    </div>
+                    <label for="exampleSelectModule">Nationality</label>
+                    <select class="form-control" name="nationality" id="exampleSelectGender">
+                                    <option>nepali </option>
+                                    <option>english</option>
+                                    </select>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputCity1">City</label>
-                    <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
-                </div>
-                <div class="form-group">
-                    <label for="exampleTextarea1">Textarea</label>
-                    <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                <button class="btn btn-dark">Cancel</button>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-dark">Cancel</button>
+        
+
             </form>
         </div>
     </div>
